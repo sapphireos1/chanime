@@ -27,7 +27,7 @@ const PROVIDER_ORDER = [
     'kiwi', 'anikoto', 'arc', 'hop', 'jet', 'bee', 'pulsar', 'pahe',
 ];
 
-const PROXY_BASE = 'YOUR_PROXY_URL';
+const PROXY_BASE = 'https://cdn-eu.1ani.me/proxy/m3u8';
 
 function proxyM3u8(url, referer) {
     if (!url || url.startsWith('blob:')) return url;

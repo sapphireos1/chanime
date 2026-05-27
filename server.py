@@ -176,13 +176,13 @@ def _gzip_text_responses(resp):
         pass
     return resp
 
-API  = os.getenv('ANIME_API_URL', 'YOUR_API_URL')
+API  = os.getenv('ANIME_API_URL', 'https://miruro-api-gamma.vercel.app')
 
 TURSO_URL   = os.getenv('TURSO_URL', 'YOUR_TURSO_URL')
 TURSO_TOKEN = os.getenv('TURSO_TOKEN', 'YOUR_TURSO_TOKEN')
-JWT_SECRET  = os.getenv('JWT_SECRET', 'YOUR_JWT_SECRET')
+JWT_SECRET  = os.getenv('JWT_SECRET', 'kv!9Xp#mQ2rL@wN5Tz&8Yb0Hc4Js6Ue3Fd1Ag7Wm!2Pk9Xn5Ry@Lq8Vt3Mz6Bc0Jh')
 JWT_ALGO   = 'HS256'
-RENDER_SALT = os.getenv('RENDER_SALT', 'YOUR_RENDER_SALT')
+RENDER_SALT = os.getenv('RENDER_SALT', 'kr0vx-7f2a9e1b4c8d3f6a0e5b2c9d1f4a7e3b8c')
 
 JWT_EXPIRY_DAYS = 7
 
@@ -194,8 +194,8 @@ ANILIST_CLIENT_ID = os.getenv("ANILIST_CLIENT_ID", "YOUR_ANILIST_CLIENT_ID")
 ANILIST_CLIENT_SECRET = os.getenv("ANILIST_CLIENT_SECRET", "YOUR_ANILIST_CLIENT_SECRET")
 ANILIST_REDIRECT_URI = os.getenv("ANILIST_REDIRECT_URI", "YOUR_ANILIST_REDIRECT_URI")
 
-MAL_CLIENT_ID     = os.getenv("MAL_CLIENT_ID",     "YOUR_MAL_CLIENT_ID")
-MAL_CLIENT_SECRET = os.getenv("MAL_CLIENT_SECRET",  "YOUR_MAL_CLIENT_SECRET")
+MAL_CLIENT_ID     = os.getenv("MAL_CLIENT_ID",     "052edda16a78859fb2c1f58f09c06a40")
+MAL_CLIENT_SECRET = os.getenv("MAL_CLIENT_SECRET",  "1ff768880c2b0e4e9fa4b675c35421815370749fed551a133ccb93c7ef93d77f")
 MAL_REDIRECT_URI  = os.getenv("MAL_REDIRECT_URI",   "YOUR_MAL_REDIRECT_URI")
 
 def _mal_make_state(user_id, code_verifier):
@@ -223,7 +223,7 @@ def _mal_parse_state(state):
 
 RECAPTCHA_SECRET = os.getenv('RECAPTCHA_SECRET', '')
 
-TVDB_API_KEY = os.getenv('TVDB_API_KEY', 'YOUR_TVDB_API_KEY')
+TVDB_API_KEY = os.getenv('TVDB_API_KEY', 'c11748ed-295c-4e42-b673-f40448058c0c')
 _tvdb_token = None
 _tvdb_token_expiry = 0
 
@@ -1786,7 +1786,7 @@ def proxy_backend(path):
 
         if path.startswith('/manga/'):
             vault_path = path[len('/manga'):]
-            vault_url = os.getenv('MANGA_VAULT_URL', 'YOUR_MANGA_VAULT_URL') + vault_path
+            vault_url = os.getenv('MANGA_VAULT_URL', 'https://manga-vault-rosy.vercel.app') + vault_path
             v_headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
                 'Accept': 'application/json, text/plain, */*',
